@@ -161,6 +161,11 @@ html, body {
 
     &__credits {
         margin-top: 1rem;
+
+        @include for-phone-only {
+            padding: .5rem;
+        }
+        
         p {
             font-size: .8rem;
             color: #ddd;
@@ -169,7 +174,7 @@ html, body {
 
             @include for-phone-only {
                 font-size: .7rem;
-                padding: .5rem;
+                
             }
         }
     }
