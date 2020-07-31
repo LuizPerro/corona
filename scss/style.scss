@@ -97,7 +97,7 @@ html, body {
         top: 7rem;
 
         @include for-phone-only {
-            width: 350px;
+            width: 250px;
             height: 150px;
             top: 8rem;
         }
