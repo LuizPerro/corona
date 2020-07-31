@@ -169,6 +169,7 @@ html, body {
 
             @include for-phone-only {
                 font-size: .7rem;
+                padding: .5rem;
             }
         }
     }
@@ -336,6 +337,10 @@ html, body {
     color: white;
     text-align: center;
     font-size: .9rem;
+
+    @include for-phone-only {
+        font-size: .8rem;
+    }
 
     &__text {
         margin: 0;
