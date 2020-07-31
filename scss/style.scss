@@ -1,3 +1,5 @@
+@import 'partials/responsive';
+
 $color-main: #0B7FB0;
 
 * {
@@ -20,14 +22,31 @@ body {
     z-index: 999;
     padding: 1rem 2rem;
 
+    @include for-phone-only {
+        padding: 1rem;
+    }
+
     &__logo {
         width: 259px;
+
+        @include for-phone-only {
+            width: 220px;
+            height: 60px;
+        }
     }
     
     &__list {
         display: flex;
         padding: 0;
         list-style-type: none;
+
+        @include for-phone-only {
+            position: fixed;
+            left: 0;
+            width: 0;
+            height: 100%;
+            display: none;
+        }
     }
 
     &__link {
@@ -71,6 +90,12 @@ body {
         height: 250px;
         position: relative;
         top: 7rem;
+
+        @include for-phone-only {
+            width: 350px;
+            height: 150px;
+            top: 8rem;
+        }
     }
 
     &__case {
@@ -78,7 +103,13 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         width: 700px;
-        margin-top: 7.5rem;
+        margin-top: 10rem;
+
+
+        @include for-phone-only {
+            flex-direction: column;
+            align-items: center;
+        }
         
         &__container {
             width: 300px;
@@ -130,6 +161,10 @@ body {
             color: #ddd;
             margin: 0;
             text-align: center;
+
+            @include for-phone-only {
+                font-size: .75rem;
+            }
         }
     }
 }
@@ -140,10 +175,18 @@ body {
     align-items: center;
     padding: 5rem 10rem;
 
+    @include for-phone-only {
+        padding: 1rem;
+    }
+
     &__welcome {
         width: 500px;
         height: 350px;
         background-color: #ddd;
+
+        @include for-phone-only {
+            width: 100%;
+        }
     }
 }
 
@@ -174,15 +217,29 @@ body {
             padding: 3rem 4rem 4rem 4rem;
             width: 50%;
             color: white;
+
+            @include for-phone-only {
+                padding: 2rem;
+                width: 100%;
+            }
         }
 
         &__title {
             color: #e4e40d;
             text-transform: uppercase;
+
+            @include for-phone-only {
+                margin: .5rem 0;
+                font-size: 1rem;
+            }
         }
 
         &__caption {
             font-size: 1.1rem;
+
+            @include for-phone-only {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -190,14 +247,24 @@ body {
 .prevent {
     padding: 5rem 4rem;
 
+    @include for-phone-only {
+        padding: 1rem;
+    }
+
     &__title {
         font-size: 2rem;
         text-align: center;
         margin-bottom: 2.5rem;
+
+        @include for-phone-only {
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+        }
     }
 
     &__container {
         display: flex;
+        flex-wrap: wrap;
         
         &__box {
             width: 300px;
@@ -206,6 +273,10 @@ body {
             border-radius: 3px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             padding: 2rem;
+
+            @include for-phone-only {
+                width: 100%;
+            }
 
             img {
                 position: relative;
@@ -228,11 +299,19 @@ body {
 
 .news {
     padding: 5rem 4rem;
+
+    @include for-phone-only {
+        padding: 1rem;
+    }
     
     &__title {
         font-size: 2rem;
         text-transform: uppercase;
         text-align: center;
+
+        @include for-phone-only {
+            font-size: 1.7rem;
+        }
     }
 
     &__container {
