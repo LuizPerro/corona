@@ -77,11 +77,15 @@ body {
     background-attachment: fixed;
     z-index: -2;
 
+    @include for-phone-only {
+        background-attachment: unset;
+    }
+
     &__overlay {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.5);
+        background-color: rgba($color: #000000, $alpha: 0.4);
         z-index: -1;
     }
 
@@ -267,15 +271,15 @@ body {
         flex-wrap: wrap;
         
         &__box {
-            width: 300px;
+            width: 100%;
             margin: 5px;
             height: 200px;
             border-radius: 3px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             padding: 2rem;
-
-            @include for-phone-only {
-                width: 100%;
+            
+            @include for-desktop-up {
+                flex: 1 1 0;
             }
 
             img {
