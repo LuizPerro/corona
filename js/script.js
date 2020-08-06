@@ -8,7 +8,7 @@ $(function () {
     // get cases
     $.ajax({
         type: "GET",
-        url: "http://localhost:8000/cases",
+        url: "http://170.233.105.100:8050/cases",
         data: {token: "mPczSRTGktoOVn5O9CnfuRufmmC9F6bG"},
         success: function (response) {
             $('#realizados').html(response.realizados);
